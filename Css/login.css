@@ -1,0 +1,230 @@
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+/* Variables CSS*/
+:root {
+    /*Colores*/
+--color-primary: hsl(79, 1005, 49%);
+--color-white: #fff;
+--color-black: #000;
+
+/* Fuentes y Tipografías*/
+--body-font: 'Poppins', sans-serif;
+--normal-font-size: .938rem;
+--tiny-font-size: .563rem;
+}
+
+/*Tipografía Responsiva*/
+@media screen and (min-width: 968px) {
+    :root {
+        --normal-font-size: 1rem; 
+    }
+}
+
+/*Contenedor del Registro de Usuario*/
+.box-area {
+    width: 930px;
+}
+
+
+.img-fluid {
+    width: 250px;
+}
+/*Contenedor Derecho*/
+.right-box {
+    padding: 40px 30px 40px 40px;
+}
+/*Custom Placeholder*/
+::placeholder {
+    font-size: 16px;
+}
+/*Para Teléfonos Celulares*/
+@media only screen and (max-width: 768px) {
+    .box-area {
+        margin: 0 10px;
+
+    }
+    .left-box {
+        height: 100px;
+        overflow: hidden;
+    }
+    .right-box {
+        padding: 20px;
+    }
+}
+
+#logo {
+    width: 35%;
+}
+
+#imagen {
+    max-width: 100%;
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#login {
+    margin: 5px;
+    height: 100%;
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.02);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2.6px);
+-webkit-backdrop-filter: blur(2.6px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Base*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+        background-color: var(--color-white);
+    }
+/* Input Moderno*/
+.form {
+    height: 100vh;
+    display: flex;
+    place-items: center;
+    margin: 0 1.5rem;
+}
+
+.form__content {
+    display: grid;
+    row-gap: 1.5rem;
+}
+
+.form__input, .form__label, .form__submit {
+    border: 0;
+    outline: none;
+    font-size: var(--normal-font-size);
+    font-family: var(--body-font);
+}
+
+.form__box {
+    width: 312px;
+    height: 59px;
+    position: relative;
+}
+
+.form_shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.form__input {
+    position: absolute;
+    border: 2.5px solid black;
+    background-color: var(--color-white);
+    width: 90%;
+    height: 100%;
+    z-index: 10;
+    padding: 18px;
+    transition: transform .3s;
+    text-align: center;
+    margin-left: 1%;
+}
+
+.form__input::placeholder {
+    transition: opacity .5s;
+}
+
+.form__label {
+    z-index: 100;
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    font-size: var(--tiny-font-size);
+    font-weight: 600;
+    transition: .2s;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.form__button {
+    justify-self: flex-end;
+    color: black;
+    background-color: var(--color-primary);
+}
+
+.form__submit {
+    padding: .875rem 1.5rem;
+    color: black;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.form__submit:hover {
+    transform: translate(-6px, -6px);
+}
+/* Opaque Placeholder*/
+.form__input:focus::placeholder {
+    opacity: 0;
+    transition: .3s;
+}
+/* Move input and sticky input up*/
+.form__input:focus, .form__input:not(:placeholder-shown).form__input:not(:focus){
+    transform: translate(-8px, -8px);
+    padding: 28px 18px 18px;
+    animation: input-animation .5s;
+}
+/* Move label and sticky label up*/
+.form__input:focus + .form__label,
+.form__input:focus, .form__input:not(:placeholder-shown).form__input:not(:focus) + .form__label{
+    opacity: 1;
+    top: 2px;
+    left: 12px;
+    transition: .3s;
+}
+/* Input bounce animation*/
+@keyframes input-animation {
+    0% {
+        transform: translate(0);
+    }
+    40% {
+        transform: translate(-9px, -9px);
+    }
+    60% {
+        transform: translate(-7px, -7px);
+    }
+}
+
+/*=============Breakpoints==================================*/
+/* Para pantallas pequeñas*/
+    @media screen and (max-width: 480px) {
+        .form__content,
+        .form__box {
+            width: 100%;
+        }
+    }
+.left-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .left-box {
+    flex-basis: 50%;
+    max-width: 50%;
+    }
+}
+        
+
+        /* Para pantallas grandes*/
+        @media screen and (min-width: 768px) {
+            .form__content{
+                zoom: 1.1;
+            }
+        }
