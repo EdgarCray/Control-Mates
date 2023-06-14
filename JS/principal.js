@@ -15,6 +15,3 @@ var imagenes = [
 }
     setInterval(cambiarImagen, tiempoIntervalo);
 
-    
-      
-    

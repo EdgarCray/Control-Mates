@@ -6,6 +6,7 @@
     <title>Minos Gym</title>
     <link rel="shortcut icon" href="/Img/logo_gimnasio.png" type="image/x-icon">
     <link rel="stylesheet" href="/Css/login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <script src="/JS/principal.js"></script>
 
     <!-- Frameworks-->
@@ -25,7 +26,7 @@
         <div class="left-box" id="div-rojo" style="background-color: #CD1818; display: block;">
             <script>function ocultarDivEnCelular() {
                 var midiv = document.getElementById('div-rojo');
-                if (window.innerWidth <= 480) {
+                if (window.innerWidth <= 760) {
                     midiv.style.display = "none";
                 } else {
                     midiv.style.display = "block";
@@ -53,6 +54,7 @@
                     <form action="" class="form__content">
                     <div class="form__box "></div>
                     <!-- Usuario-->
+                        <span></span>
                         <input type="email" name="" id="" class="form__input" placeholder="Ingresa tu usuario">
                         <label for="" class="form__label">Ingresa tu usuario</label>
                         <div class="form__shadow"></div>
@@ -61,25 +63,40 @@
                 <div class="input-group mb-1">
                     <!-- Contraseña-->
                     <div class="form__box"></div>
-                    <input type="text" name="" id="" class="form__input" placeholder="Ingresa tu contraseña">
+                    <input type="password" name="" id="mostrar" class="form__input" placeholder="Ingresa tu contraseña">
                     <label for="" class="form__label">Ingresa tu contraseña</label>
                     <div class="form__shadow"></div>
                 </div>
                 <div class="input-group mb-5 d-flex justify-content-between">
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" name="" id="recordarUsuario">
-                        <label for="recordarUsuario" class="form-check-label text-secondary"><small>Recordar Usuario</small></label>
+                        <label class="switch">
+                            <input type="checkbox" id="password">
+                            <span class="slider"></span>
+                            </label>
+                            <label id="mostrarContraseña">Mostrar contraseña</label>
                     </div>
+                    <script>
+    // Mostrar ocultar la contraseña //
+    var checkbox = document.getElementById("password");
+    var mostrar = document.getElementById("mostrar");
+    checkbox.addEventListener("change", function() {
+        if (password.checked) {
+        mostrar.type = "text";
+    } else {
+    mostrar.type = "password";
+    }
+});
+                    </script>
                     <!---->
                     <div class="forgot">
-                        <small><a href="#">¿Olvidaste tu contraseña?</a></small>
+                        <small><a id="olvidar" href="#">¿Olvidaste tu contraseña?</a></small>
                     </div>
                 </div>
                 <!---->
                 <div class="input-group mb3">
                     <!-- Boton-->
                     <div class="form__button">
-                        <input type="submit" class="form__submit" value="Iniciar Sesión">
+                        <input type="submit" class="form__submit" value="Iniciar Sesión" style="background-color: #CD1818;">
                     </div>
                 </div>
             </form>

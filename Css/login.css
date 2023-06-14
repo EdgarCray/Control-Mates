@@ -3,7 +3,7 @@
 /* Variables CSS*/
 :root {
     /*Colores*/
---color-primary: hsl(79, 1005, 49%);
+--color-primary: black;
 --color-white: #fff;
 --color-black: #000;
 
@@ -60,8 +60,9 @@
     max-width: 100%;
     width: 90%;
     height: auto;
+    max-height: max-content;
     border-radius: 10px;
-    margin-top: 10px;
+    margin-top: 7%;
 }
 
 #login {
@@ -90,7 +91,7 @@ body {
     }
 /* Input Moderno*/
 .form {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     place-items: center;
     margin: 0 1.5rem;
@@ -98,7 +99,7 @@ body {
 
 .form__content {
     display: grid;
-    row-gap: 1.5rem;
+    row-gap: 1rem;
 }
 
 .form__input, .form__label, .form__submit {
@@ -126,7 +127,7 @@ body {
     border: 2.5px solid black;
     background-color: var(--color-white);
     width: 90%;
-    height: 100%;
+    height: 20%;
     z-index: 10;
     padding: 18px;
     transition: transform .3s;
@@ -148,12 +149,15 @@ body {
     transition: .2s;
     pointer-events: none;
     opacity: 0;
+    margin-left: 10px;
 }
 
 .form__button {
     justify-self: flex-end;
-    color: black;
+    color: greenyellow;
     background-color: var(--color-primary);
+    margin: 5%;
+    margin-left: 30%;
 }
 
 .form__submit {
@@ -228,3 +232,63 @@ body {
                 zoom: 1.1;
             }
         }
+
+
+/*Modificar el checkbox*/
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+}
+
+  /* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+  /* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    border: 2px solid #414141;
+    border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    left: 0.2em;
+    bottom: 0.2em;
+    background-color: white;
+    border-radius: inherit;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.switch input:checked + .slider {
+    box-shadow: 0 0 20px rgba(241, 9, 59, 0.8);
+    border: 2px solid red;
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(1.5em);
+}
+
+/*Mostrar contraseña - texto*/
+#mostrarContraseña {
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+#olvidar {
+    font-size: small;
+    color: red;
+}
