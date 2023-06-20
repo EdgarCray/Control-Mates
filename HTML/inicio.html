@@ -1,78 +1,159 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/Img/logo_gimnasio.png" type="image/x-icon">
-    <link rel="stylesheet" href="/Css/main.css">
-    <title>Minos Gym | Inicio</title>
-    <script src="https://kit.fontawesome.com/ed9d230dd4.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <!--Header-->
-    <!--<header>
-        <div class="container-fluid">
-            <div class="headerm">
-                <p><a href="#default" class="logo mx-auto">Minos Gym</a>
-                </p>
-                <div class="headerm-right">
-                    <img src="/Img/logo_gimnasio.png" alt="Logo" width="60">
-                </div>
-                </div> 
-        </div>
-    </header> -->
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/Img/logo_gimnasio.png" type="image/x-icon">
 
-            <!--==================== HEADER ====================-->
-            <header class="header" id="header">
-                <nav class="nav container">
-                    <a href="#" class="nav__logo">Emili</a>
-    
-                    <div class="nav__menu" id="nav-menu">
-                        <ul class="nav__list grid">
-                            <li class="nav__item">
-                                <a href="#" class="nav__link">
-                                    <i class="uil uil-estate nav__icon"></i> Inicio
-                                </a>
-                            </li>
-    
-                            <li class="nav__item">
-                                <a href="#about" class="nav__link"> 
-                                    <i class="uil uil-user nav__icon"></i> Sobre mi
-                                </a>
-                            </li>
-    
-                            <li class="nav__item">
-                                <a href="#skills" class="nav__link">
-                                    <i class="uil uil-file-heart nav__icon"></i> Mis gustos
-                                </a>
-                            </li>
-    
-                            <li class="nav__item">
-                                <a href="#services" class="nav__link">
-                                    <i class="uil uil-suitcase-alt nav__icon"></i> Servicios
-                                </a>
-                            </li>
-    
-                            <li class="nav__item">
-                                <a href="#portfolio" class="nav__link">
-                                    <i class="uil uil-scenery nav__icon"></i> Portafolio
-                                </a>
-                            </li>
-    
-                            <li class="nav__item">
-                                <a href="#contacme" class="nav__link">
-                                    <i class="uil uil-message nav__icon"></i> Contáctame
-                                </a>
-                            </li>
-                        </ul>
-                        <i class="uil uil-times nav__close" id="nav-close"></i>
+        <!--==================== FONT AWESOME ====================-->
+        <script src="https://kit.fontawesome.com/ed9d230dd4.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+        <!--==================== CSS ====================-->
+        <link rel="stylesheet" href="/Css/main.css">
+
+        <title>Minos Gym | Inicio</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header>
+            <div class="container-fluid">
+                <div class="headerm">
+                    <p id="logo__texto"><a href="#default" class="logo ">Minos Gym</a>
+                    </p>
+                    <div class="headerm-right">
+                        <img src="/Img/logo_gimnasio.png" alt="Logo" width="65" >
                     </div>
-                </nav>
-                <div class="nav__btns">
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="uil uil-apps"></i>
-                    </div>
+                    </div> 
+            </div>
+        </header>
+        <!--=================== MENU =====================-->
+        <div class="header" id="header" style="background-color: transparent;">
+            <nav class="nav container">
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list grid">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">
+                                <i class="uil uil-estate nav__icon"></i> Inicio
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link"> 
+                                <i class="uil uil-user nav__icon"></i> Usuarios
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">
+                                <i class="uil uil-money-bill nav__icon"></i> Pagos
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#services" class="nav__link">
+                                <i class="uil uil-chart-line nav__icon"></i> Estadísticas
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#portfolio" class="nav__link">
+                                <i class="uil uil-dumbbell nav__icon"></i> Áreas
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#contacme" class="nav__link">
+                                <i class="uil uil-qrcode-scan nav__icon"></i> Escáner
+                            </a>
+                        </li>
+                    </ul>
+                    <i class="uil uil-times nav__close" id="nav-close"></i>
                 </div>
-            </header>
-</body>
+            </nav>
+            <div class="nav__btns">
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
+            </div>
+        </div>
+
+        <!--================ MENU PARA COMPUTADORAS ==================-->
+        <div class="rectangulo" id="rectangulo" style="display: block;">
+            <i class="uil uil-house-user"></i> Inicio
+        </div>    
+        <script>function ocultarRectangulo() {
+            var midiv = document.getElementById('rectangulo');
+            if (window.innerWidth <= 760) {
+                midiv.style.display = "none";
+            } else {
+                midiv.style.display = "block";
+            }
+        }
+          // Llamar a la función al cargar la página
+            ocultarRectangulo();
+          // Agregar evento de redimensionamiento de ventana
+        window.addEventListener("resize", ocultarRectangulo);</script>
+
+        <div class="principal">
+            <div class="menues" id="menu" style="display: block;">
+                <script>
+                    function ocultarDivEnCelular() {
+                        var innerDiv = document.getElementById('menu');
+                        if (window.innerWidth <= 767) {
+                            innerDiv.style.display = "none";
+                        } else {
+                            innerDiv.style.display = "block";
+                        }
+                    }
+                    
+                    // Llamar a la función al cargar la página
+                    ocultarDivEnCelular();
+                    
+                    // Agregar evento de redimensionamiento de ventana
+                    window.addEventListener("resize", ocultarDivEnCelular);
+                </script>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#"><i class="uil uil-users-alt"></i>
+                            </i> Usuarios</a></li><br>
+                        <li><a href="#"><i class="uil uil-money-bill-stack"></i>
+                            Pagos</a></li><br>
+                        <li><a href="#"><i class="uil uil-comparison"></i>
+                            Estadísticas</a></li><br>
+                        <li><a href="#"><i class="uil uil-dumbbell"></i>
+                            Áreas</a></li><br>
+                        <li><a href="#"><i class="uil uil-qrcode-scan"></i>
+                            Escáner</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="secciones" id="secciones" style="width: 70%;"></div>
+            </div>
+            <script>
+                function cambiarTamaño (){
+                var secciones = document.getElementById('secciones');
+                if (window.innerWidth <= 767) {
+                    secciones.style.width = "90%";
+                }
+            }
+            cambiarTamaño();
+            // Agregar evento de redimensionamiento de ventana
+            window.addEventListener("resize", ocultarDivEnCelular);
+            </script>
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+        
+        </footer>
+        
+        <!--==================== SCROLL TOP ====================-->
+        
+
+        <!--==================== SWIPER JS ====================-->
+        <script src="/JS/swiper-bundle.min.js"></script>
+
+        <!--==================== MAIN JS ====================-->
+        <script src="/JS/principal.js"></script>
+    </body>
 </html>

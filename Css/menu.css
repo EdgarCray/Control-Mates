@@ -1,57 +1,409 @@
-/*Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+    --header-height: 3rem;
+
+    /*========== Colors ==========*/
+    /* Change favorite color */
+    --hue-color: 2; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+
+    /* HSL color mode */
+    --first-color: hsl(var(--hue-color), 84%, 44%);
+    --first-color-second: hsl(var(--hue-color), 69%, 61%);
+    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --text-color: hsl(var(--hue-color), 8%, 45%);
+    --text-color-light: hsl(var(--hue-color), 8%, 65%);
+    --input-color: hsl(var(--hue-color), 70%, 96%);
+    --body-color: hsl(var(--hue-color), 60%, 99%);
+    --container-color: #fff;
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+
+    /*========== Font and typography ==========*/
+    --body-font: 'Poppins', sans-serif;
+
+    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== Margenes Bottom ==========*/
+    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+    :root {
+        --big-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+/*========== Variables Dark theme ==========*/
+
+
+/*========== Button Dark/Light ==========*/
+
+
+/*==================== BASE ====================*/
+* {
+  box-sizing: border-box;  /*Investigar*/
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;  /*Investigar*/
+}
 
 body {
-    font-family: 'Poppins', sans-serif;
-}*/
-/*
-p{
-    text-align: center;
-    padding-left: 45%;
-}*/
+  margin: 0 0 var(--header-height) 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-image: url(/Img/fondo.jpeg);
+  color: var(--text-color);
+}
 
-/* Style the header with a grey background and some padding */
-/*.headerm {
-    overflow: hidden;
-    background-color: black;
-    padding: 20px 10px;
-    height: 90px;
-}*/
-  
-  /* Style the header links 
-  .headerm a {
+h1, h2, h3, h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*==================== LAYOUT ====================*/
+.container {
+  max-width: 768px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;  /*Investigar*/
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z-fixed);  /*Investigar*/
+  background-color: var(--body-color);
+}
+
+/*==================== HEADER =================*/
+header {
+  overflow: hidden;
+  background-color: black;
+  padding: 20px 10px;
+  height: 90px;    
+}
+.headerm a {
     float: left;
     color: white;
-    text-align: center;
-    padding: 12px;
     text-decoration: none;
-    font-size: 18px;
     line-height: 25px;
     border-radius: 4px;
-  }*/
-  
-  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger 
-  .headerm a.logo {
+    font-family: var(--body-font);
+    margin-top: 10px;
+  }
+  #header {
+    background-color: transparent;
+  }
+p{
+    padding-left: 42%;
+    padding-right: 25%;
+    font-size: var(--big-font-size);
+}
+.headerm a.logo {
     font-size: 25px;
     font-weight: bold;
-}*/
-
-
-  /* Float the link section to the right 
+}
+  /* Float the link section to the right */
   .headerm-right {
     float: right;
-  }*/
+  }
+/*==================== NAV ====================*/
+
+.nav {
+  max-width: 968px;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo, nav__toggle {
+color: var(--title-color);
+font-weight: var(--font-medium);
+}
+
+.nav__logo:hover {
+    color: var(--first-color);
+}
+
+.nav__toggle {
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.nav__toggle:hover {
+  color: var(--first-color);
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    padding: 2rem 1.5rem 4rem;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);  /*Investigar*/
+    border-radius: 1.5rem 1.5rem 0 0;
+    transform: .3s;
+  }
+}
+
+.nav__list {
+  grid-template-columns: repeat(3, 1fr);  /*Investigar*/
+  gap: 2rem; /*Investigar*/
+}
+
+.nav__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--small-font-size);
+  color: #fff;
+  font-weight: var(--font-medium);
+}
+
+.nav__link:hover {
+  color: var(--first-color);
+}
+
+.nav__icon {
+  font-size: 1.5rem;
+}
+
+.nav__close {
+  position: absolute;
+  right: 1.3rem;
+  bottom: .5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--first-color);
+}
+
+.nav__close:hover {
+  color: var(--first-color-alt);
+}
+/* show menu */
+.show-menu {
+  bottom: 0; 
+}
+
+.nav__toggle {
+  margin: 5px;
+  font-size: 1.7rem;
+}
+
+.nav__toggle:hover {
+  color: var(--first-color-alt);
+}
+
+/* Menu para grandes dispositivos */
+.rectangulo {
+  background-color: #fff;
+  margin-top: 20px;
+  text-align: center;
+  height: 40px;
+  font-size: var(--h2-font-size);
+  width: 90%;
+  border-radius: 0 5px 5px 0;
+  display: block;
+}
+.principal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.menues {
+  width: 25%;
+  height: 100%;
+  margin-top: 20px;
+}
+.menues li {
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
+  background-color: black;
+  text-align: center;
+  height: 40px;
+}
+
+.menues a:hover {
+  color: red;
+}
+.menues a {
+  color: white;
+}
+.secciones {
+  width: 75%;
+  height: 600px;
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: #fff;
+}
+/*==================== BUTTONS ====================*/
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 1rem;
+  border-radius: .5rem;
+  font-weight: var(--font-medium);
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
+}
+
+.button__icon {
+  font-size: 1.25rem;
+  margin-left: var(--mb-0-5);
+  transition: .3s;
+}
+
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+/*==================== FOOTER ====================*/
+
+
+/*==================== MEDIA QUERIES ====================*/
+/* For small devices */
+
+@media screen and (max-width: 350px) {
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+  .nav__menu {
+    padding: 2rem .25rem 4rem;
+  }
+  .nav__list {
+    column-gap: 0;
+  }
+  .home__content {
+    grid-template-columns: .25fr 3fr;
+  }
+  .home__blob {
+    width: 180px;
+  }
+
+}
+/* For medium devices */
+@media screen and (min-width: 568px) {
+  .home__content {
+    grid-template-columns: max-content 1fr 1fr;
+  }
+  .home__data {
+    grid-column: initial;
+  }
+  .home__img {
+    order: 1;
+    justify-self: center;
+  }
+}
+
+@media screen and (min-width: 767px) {
   
-  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other 
-  @media screen and (max-width: 500px) {
-    .headerm a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    .headerm-right {
-      float: none;
-    }
-  }*/
+  .container {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  body {
+    margin: 0;
+  }
+  .section {
+    padding: 6rem 0 2rem;
+  }
+  .section__subtitle {
+    margin-bottom: 4rem;
+  }
+
+  .header {
+    top: 0;
+    bottom: initial;
+    display: none;
+  }
+  .header,
+  .footer__container {
+    padding: 0 1rem;
+  }
+  .nav {
+    height: calc(--header-height) + 1.rem;
+    column-gap: 1rem;
+  }
+  .nav__icon,
+  .nav__close,
+  .nav__toggle {
+    display: none;
+  }
+  .nav__list {
+    display: flex;
+    column-gap: 2rem;
+  }
+  .nav__menu {
+    margin-left: auto;
+  }
+
+}
+
 
 
