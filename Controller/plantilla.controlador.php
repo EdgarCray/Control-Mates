@@ -1,7 +1,7 @@
 <?php
 class ControladorPlantilla {
     /* Llamar a la plantilla */
-    public function cargarPlantilla() {
+    public function ctrTraerPlantilla() {
         include "View/plantilla.php";
     }
 }

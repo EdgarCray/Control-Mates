@@ -1,5 +1,6 @@
 /*==================== GOOGLE FONTS ====================*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 /*==================== VARIABLES CSS ====================*/
 :root {
@@ -69,12 +70,6 @@
     }
 }
 
-/*========== Variables Dark theme ==========*/
-
-
-/*========== Button Dark/Light ==========*/
-
-
 /*==================== BASE ====================*/
 * {
   box-sizing: border-box;  /*Investigar*/
@@ -90,7 +85,7 @@ body {
   margin: 0 0 var(--header-height) 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-image: url(/Img/fondo.jpeg);
+  background-image: url(http://localhost/Control%20Mates/Img/fondo.jpeg);
   color: var(--text-color);
 }
 
@@ -146,13 +141,13 @@ header {
     text-decoration: none;
     line-height: 25px;
     border-radius: 4px;
-    font-family: var(--body-font);
+    font-family: 'Abril Fatface', cursive;
     margin-top: 10px;
   }
   #header {
     background-color: transparent;
   }
-p{
+  #logo__texto{
     padding-left: 42%;
     padding-right: 25%;
     font-size: var(--big-font-size);
@@ -255,14 +250,14 @@ font-weight: var(--font-medium);
   color: var(--first-color-alt);
 }
 
-/* Menu para grandes dispositivos */
+/* Menu para dispositivos grandes */
 .rectangulo {
   background-color: #fff;
   margin-top: 20px;
   text-align: center;
   height: 40px;
   font-size: var(--h2-font-size);
-  width: 90%;
+  width: 96%;
   border-radius: 0 5px 5px 0;
   display: block;
 }
@@ -290,13 +285,8 @@ font-weight: var(--font-medium);
 .menues a {
   color: white;
 }
-.secciones {
-  width: 75%;
-  height: 600px;
-  margin-top: 20px;
-  margin-left: 20px;
-  background-color: #fff;
-}
+
+
 /*==================== BUTTONS ====================*/
 .button {
   display: inline-block;
@@ -402,8 +392,18 @@ font-weight: var(--font-medium);
   .nav__menu {
     margin-left: auto;
   }
-
+  .secciones {
+    display: grid;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
-
+@media screen and (min-width: 1024px) {
+  .secciones {
+    display: grid;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
 

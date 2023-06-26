@@ -39,31 +39,31 @@
                         </li>
 
                         <li class="nav__item">
-                            <a href="#about" class="nav__link"> 
+                            <a href="#" class="nav__link"> 
                                 <i class="uil uil-user nav__icon"></i> Usuarios
                             </a>
                         </li>
 
                         <li class="nav__item">
-                            <a href="#skills" class="nav__link">
+                            <a href="#" class="nav__link">
                                 <i class="uil uil-money-bill nav__icon"></i> Pagos
                             </a>
                         </li>
 
                         <li class="nav__item">
-                            <a href="#services" class="nav__link">
+                            <a href="#" class="nav__link">
                                 <i class="uil uil-chart-line nav__icon"></i> Estadísticas
                             </a>
                         </li>
 
                         <li class="nav__item">
-                            <a href="#portfolio" class="nav__link">
+                            <a href="#" class="nav__link">
                                 <i class="uil uil-dumbbell nav__icon"></i> Áreas
                             </a>
                         </li>
 
                         <li class="nav__item">
-                            <a href="#contacme" class="nav__link">
+                            <a href="#" class="nav__link">
                                 <i class="uil uil-qrcode-scan nav__icon"></i> Escáner
                             </a>
                         </li>
@@ -115,7 +115,7 @@
                 </script>
                 <nav>
                     <ul>
-                        <li>
+                        <li class="opciones">
                             <a href="#"><i class="uil uil-users-alt"></i>
                             </i> Usuarios</a></li><br>
                         <li><a href="#"><i class="uil uil-money-bill-stack"></i>
@@ -129,18 +129,39 @@
                     </ul>
                 </nav>
             </div>
-            <div class="secciones" id="secciones" style="width: 70%;"></div>
+        <!-- =================== Secciones ==================-->
+            <div class="secciones" id="secciones" style="width: 70%;">
+                <div class="card-container">
+                    <div class="card">
+                      <h2 id="titulo__tarjeta">Nuevos Clientes</h2>
+                      <p>0</p>
+                    </div>
+                    <div class="card">
+                      <h2 id="titulo__tarjeta">Pagos Realizados</h2>
+                      <p>0</p>
+                    </div>
+                    <div class="card">
+                      <h2 id="titulo__tarjeta">Personas en el Gym</h2>
+                      <p>0</p>
+                    </div>
+                    <div class="card">
+                      <h2 id="titulo__tarjeta">Empleados</h2>
+                      <p>0</p>
+                    </div>
+                  </div>
+            </div>
             </div>
             <script>
                 function cambiarTamaño (){
                 var secciones = document.getElementById('secciones');
                 if (window.innerWidth <= 767) {
                     secciones.style.width = "90%";
+                    secciones.style.marginLeft = "10px";
                 }
             }
             cambiarTamaño();
             // Agregar evento de redimensionamiento de ventana
-            window.addEventListener("resize", ocultarDivEnCelular);
+            window.addEventListener("resize", cambiarTamaño);
             </script>
         <!--==================== FOOTER ====================-->
         <footer class="footer">
