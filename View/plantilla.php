@@ -5,13 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="http://localhost/Control%20Mates/Img/logo_gimnasio.png" type="image/x-icon">
 
-        <!--==================== FONT AWESOME ====================-->
+        <!--==================== UNICONS ====================-->
         <script src="https://kit.fontawesome.com/ed9d230dd4.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
         <!--==================== CSS ====================-->
         <link rel="stylesheet" href="http://localhost/Control%20Mates/Css/menu.css">
         <link rel="stylesheet" href="http://localhost/Control%20Mates/Css/main.css">
+    
 
         <title>Minos Gym | Inicio</title>
     </head>
@@ -170,7 +171,7 @@
 
         <!--================ MENU PARA COMPUTADORAS ==================-->
         <div class="rectangulo" id="rectangulo" style="display: block;">
-            <i class="uil uil-house-user"></i> Inicio
+        <i class="uil uil-house-user"></i> Inicio
         </div>    
         <script>function ocultarRectangulo() {
             var midiv = document.getElementById('rectangulo');
@@ -267,7 +268,7 @@
                 </nav>
             </div>
         <!-- =================== Secciones ==================-->
-            <div class="secciones" id="secciones" style="width: 70%;">
+            <div class="secciones" id="secciones" style="width: 70%; display: block">
                 <?php 
                 if (isset($_GET["pagina"])) {
 
@@ -276,7 +277,8 @@
                         $_GET["pagina"] == "pagos" ||
                         $_GET["pagina"] == "estadisticas" ||
                         $_GET["pagina"] == "areas" ||
-                        $_GET["pagina"] == "escaner")
+                        $_GET["pagina"] == "escaner" ||
+                        $_GET["pagina"] == "usuarios.mostrar")
                         {
                             include "Paginas/" . $_GET["pagina"] . ".php";
                 } else {
@@ -286,6 +288,19 @@
                 include "Paginas/inicio.php";
             }
                 ?>
+                <script>function ocultarRectangulo() {
+            var midiv = document.getElementById('secciones');
+            console.log(midiv); 
+            if (window.innerWidth <= 767) {
+                midiv.style.width = 100;
+            } else {
+                midiv.style.display = "block";
+            }
+        }
+          // Llamar a la función al cargar la página
+            ocultarRectangulo();
+          // Agregar evento de redimensionamiento de ventana
+        window.addEventListener("resize", ocultarRectangulo);</script>
             </div>
             </div>
 
@@ -302,5 +317,6 @@
 
         <!--==================== MAIN JS ====================-->
         <script src="http://localhost/Control%20Mates/JS/principal.js"></script>
+
     </body>
 </html>

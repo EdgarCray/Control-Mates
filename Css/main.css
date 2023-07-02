@@ -56,5 +56,111 @@
   }
   }
   
+/* =============== Formulario ================*/
+
+.formUsuarios {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.70);
+  width: 100%;
+}
+
+label {
+  color: #fff;
+  margin: 5px;
+}
+
+input {
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+select {
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.row {
+  width: 100%;
+  height: 100%;
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+/* Estilos de los botones */
+.botones {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.botones a {
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.botones a.btn-primary {
+  background-color: #ccc;
+  border-radius: 5px;
+  color: #000;
+}
+
+.botones a.btn-primary:hover {
+  background-color: #007BFF;
+}
+.botones a.button {
+  background-color: #ccc;
+  color: #000;
+}
+
+.formUsuarios a {
+  padding: 10px 15px 10px 30px;
+  border-radius: 5px;
+}
+/* Estilos del formulario */
+.formUsuarios {
+  margin-bottom: 20px;
+}
+
+.formUsuarios .row {
+  margin-bottom: 10px;
+}
+
+.formUsuarios .col-sm-4 {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.formUsuarios label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.formUsuarios input,
+.formUsuarios select {
+  width: 100%;
+  padding: 5px;
+}
+
+.formUsuarios .text-center {
+  text-align: center;
+}
+
+.formUsuarios a[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
 
 
+@media screen and (min-width: 767px) {
+  .formUsuarios {
+    width: 100%;
+    height: 90%;
+  }
+}
