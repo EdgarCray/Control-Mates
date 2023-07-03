@@ -285,7 +285,7 @@
                         $_GET["pagina"] == "usuarios.mostrar" ||
                         $_GET["pagina"] == "usuarios.editar" ||
                         $_GET["pagina"] == "pagos" ||
-                        $_GET["pagina"] == "pagos.registro" ||
+                        $_GET["pagina"] == "pagos.mostrar" ||
                         $_GET["pagina"] == "estadisticas" ||
                         $_GET["pagina"] == "areas" ||
                         $_GET["pagina"] == "escaner" )
