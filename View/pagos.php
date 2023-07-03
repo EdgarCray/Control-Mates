@@ -1,6 +1,6 @@
 <div class="botones">
-                    <a href="index.php?pagina=usuarios" class="btn btn-primary">Registrar</a>
-                <a href="index.php?pagina=usuarios.mostrar" class="button">Mostrar</a>
+                <a href="index.php?pagina=usuarios" class="btn btn-primary" style="background-color: #FFE7A0;">Registrar</a>
+                <a href="index.php?pagina=usuarios.mostrar" class="button" style="background-color: #D5DBDB;">Mostrar</a>
                 </div>
                 <div class="formUsuarios">
                 <script>function cambiarTamaño() {
@@ -50,7 +50,7 @@
                             <input type="text" class="ml-2">
                         </div> <br>
                         <div class=" text-center"><br>
-                        <a href="#" class="button">Mostrar</a><br>
+                        <a href="#" class="button">Enviar</a><br>
                         <p>.</p>
                         </div>
                     </div>

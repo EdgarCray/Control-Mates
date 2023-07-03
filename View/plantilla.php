@@ -10,9 +10,8 @@
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
         <!--==================== CSS ====================-->
-        <link rel="stylesheet" href="http://localhost/Control%20Mates/Css/menu.css">
-        <link rel="stylesheet" href="http://localhost/Control%20Mates/Css/main.css">
-    
+        <link rel="stylesheet" href="https://localhost/Control%20Mates/Css/menu.css">
+        <link rel="stylesheet" href="https://localhost/Control%20Mates/Css/main.css">    
 
         <title>Minos Gym | Inicio</title>
     </head>
@@ -208,7 +207,6 @@
                     <ul>
                         <?php if (isset($_GET["pagina"])) : ?>
 
-
                             <?php if ($_GET["pagina"] == "usuarios") : ?>
                                 <li class="opciones">
                             <a href="index.php?pagina=inicio"><i class="uil uil-airplay"></i>
@@ -268,17 +266,29 @@
                 </nav>
             </div>
         <!-- =================== Secciones ==================-->
-            <div class="secciones" id="secciones" style="width: 70%; display: block">
+            <div class="secciones" id="secciones" style="width: 90%;">
+            <script>function ocultarRectangulo() {
+            var midiv = document.getElementById('secciones');
+            if (window.innerWidth <= 767) {
+                midiv.style.width = 100;
+            }
+        }
+          // Llamar a la función al cargar la página
+            ocultarRectangulo();
+          // Agregar evento de redimensionamiento de ventana
+        window.addEventListener("resize", ocultarRectangulo);</script>
                 <?php 
                 if (isset($_GET["pagina"])) {
 
                     if ($_GET["pagina"] == "inicio" ||
                         $_GET["pagina"] == "usuarios" ||
+                        $_GET["pagina"] == "usuarios.mostrar" ||
+                        $_GET["pagina"] == "usuarios.editar" ||
                         $_GET["pagina"] == "pagos" ||
+                        $_GET["pagina"] == "pagos.registro" ||
                         $_GET["pagina"] == "estadisticas" ||
                         $_GET["pagina"] == "areas" ||
-                        $_GET["pagina"] == "escaner" ||
-                        $_GET["pagina"] == "usuarios.mostrar")
+                        $_GET["pagina"] == "escaner" )
                         {
                             include "Paginas/" . $_GET["pagina"] . ".php";
                 } else {
@@ -288,19 +298,7 @@
                 include "Paginas/inicio.php";
             }
                 ?>
-                <script>function ocultarRectangulo() {
-            var midiv = document.getElementById('secciones');
-            console.log(midiv); 
-            if (window.innerWidth <= 767) {
-                midiv.style.width = 100;
-            } else {
-                midiv.style.display = "block";
-            }
-        }
-          // Llamar a la función al cargar la página
-            ocultarRectangulo();
-          // Agregar evento de redimensionamiento de ventana
-        window.addEventListener("resize", ocultarRectangulo);</script>
+            
             </div>
             </div>
 

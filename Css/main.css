@@ -157,6 +157,31 @@ select {
   cursor: pointer;
 }
 
+/* ========== Tabla de los Usuarios ====================*/
+#inputUsuario {
+  width: 250px;
+}
+
+.tablaUsuarios {
+  width: 98%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.tablaUsuarios th,
+.tablaUsuarios td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.tablaUsuarios th {
+  background-color: #f2f2f2;
+}
+
+.tablaUsuarios tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
 
 @media screen and (min-width: 767px) {
   .formUsuarios {
